@@ -4,6 +4,7 @@
   --color-green: #5AB16D;
   --color-white: #fff;
   --color-grey : #F5F5F5;
+  --color-black: #595959;
   --color-btn  : var(--color-green);
   /* Fonts */
   --font-title : 'Roboto', sans-serif;
@@ -63,12 +64,19 @@
 }
 
 /* Cards */
+.main {
+  display              : grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap             : 100px;
+  padding              : 85px 46px;
+
+}
 
 .card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: ;
+  display         : flex;
+  flex-direction  : column;
+  justify-content : space-between;
+  padding         : 25px 13px 11px 27px;
   width           : 287px;
   height          : 193px;
   border          : solid 1px #BABABA;
@@ -77,5 +85,66 @@
 }
 
 .card__name {
-  
+  font-family   : var(--font-title);
+  font-weight   : 500;
+  font-size     : 18px;
+  line-height   : 21px;
+  color         : var(--color-black);
+  text-transform: uppercase;
 }
+
+.card__year {
+  font-family   : var(--font-title);
+  font-weight   : 400;
+  font-size     : 12px;
+  line-height   : 14px;
+  color         : var(--color-black);
+  text-transform: uppercase;
+}
+
+.card__tags {
+  display     : flex;
+  margin-right: 4px;
+}
+
+.tag {
+  margin-right : 8px;
+  padding      : 4px 16px;
+  font-family  : var(--font-normal);
+  font-weight  : 400;
+  font-size    : 10px;
+  line-height  : 16px;
+  border-radius: 16px;
+}
+
+.card__tags--industry {
+  border: 1.5px #7B70F4 solid;
+  color : #7B70F4;
+}
+
+.card__tags--size {
+  border: 1.5px #0B7015 solid;
+  color : #0B7015;
+}
+
+.card__container-link {
+  display        : flex;
+  justify-content: flex-end;
+}
+
+.card__link {
+  display         : flex;
+  justify-content : center;
+  align-items     : center;
+  width           : 80px;
+  height          : 22px;
+  border-radius   : 5px;
+  background-color: var(--color-btn);
+  color           : var(--color-white);
+  font-family     : var(--font-normal);
+  font-size       : 10px;
+  line-height     : 16px;
+  text-decoration : none;
+}
+
+/* footer  */
