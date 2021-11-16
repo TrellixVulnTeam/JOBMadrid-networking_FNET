@@ -1,0 +1,73 @@
+.main {
+  display              : grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap             : 47px;
+  padding              : 85px 46px;
+  place-items          : center;
+}
+
+.card {
+  display         : flex;
+  flex-direction  : column;
+  justify-content : space-between;
+  padding         : 25px 13px 11px 27px;
+  width           : 287px;
+  height          : 193px;
+  border          : solid 1px #BABABA;
+  border-radius   : 10px;
+  background-color: var(--color-grey);
+
+  &__name {
+    font-family   : var(--font-title);
+    font-weight   : 500;
+    font-size     : 18px;
+    line-height   : 21px;
+    color         : var(--color-black);
+    text-transform: uppercase;
+  }
+
+  &__year {
+    font-family   : var(--font-title);
+    font-weight   : 400;
+    font-size     : 12px;
+    line-height   : 14px;
+    color         : var(--color-black);
+    text-transform: uppercase;
+  }
+
+  &__tags {
+    display     : flex;
+    margin-right: 4px;
+
+    &--industry {
+      border: 1.5px #7B70F4 solid;
+      color : #7B70F4;
+    }
+
+    &--size {
+      border: 1.5px #0B7015 solid;
+      color : #0B7015;
+    }
+  }
+
+  &__container-link {
+    display        : flex;
+    justify-content: flex-end;
+  }
+
+  &__link {
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    width           : 80px;
+    height          : 22px;
+    border-radius   : 5px;
+    background-color: var(--color-btn);
+    color           : var(--color-white);
+    font-family     : var(--font-normal);
+    font-size       : 10px;
+    line-height     : 16px;
+    text-decoration : none;
+  }
+
+}
