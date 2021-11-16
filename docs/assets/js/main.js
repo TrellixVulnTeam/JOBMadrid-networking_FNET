@@ -1,1 +1,1 @@
-"use strict";console.log(">> Ready :)");
+"use strict";console.log(">> Ready :)"),fetch("https://challenges-asset-files.s3.us-east-2.amazonaws.com/jobMadrid/companies.json").then(e=>e.json()).then(e=>{const o=e.map(e=>({name:null===e.name?"Desconocido":e.name,founded:null===e.founded?"Desconocido":e.founded,id:e.id,industry:null===e.industry?e.id:e.industry,size:null===e.size?"Desconocido":e.size,website:null===e.website?"Desconocido":e.website}));return console.log(o),o}).catch(e=>{console.log(e)});

@@ -1,10 +1,3 @@
-'use strict';
-
-console.log('>> Ready :)');
-
-
-// global variables
-let dataCompanies = [];
 // collect server data
 fetch(
   `https://challenges-asset-files.s3.us-east-2.amazonaws.com/jobMadrid/companies.json`
@@ -27,7 +20,3 @@ fetch(
   .catch((error) => {
     console.log(error);
   });
-
-// render cards companies
-
-//# sourceMappingURL=main.js.map
