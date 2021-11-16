@@ -4,6 +4,7 @@ fetch(
 )
   .then((response) => response.json())
   .then((data) => {
+
     dataCompanies = data.map((aData) => {
       return {
         id: aData.id,
@@ -14,6 +15,9 @@ fetch(
         website: aData.website === null ? 'unknown' : aData.website,
       };
     });
+
+    renderCards()
+
     return dataCompanies;
   })
 

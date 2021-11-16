@@ -2,6 +2,11 @@
 
 console.log('>> Ready :)');
 
+// html-js variables
+const filterChips = document.querySelector('.js_filter_chips');
+const filterBtn = document.querySelector('.js_filter_btn');
+const cardsCompanies = document.querySelector('.js_cards_companies');
+const cardWebsite = document.querySelector('.js_card_website')
 
 // global variables
 let dataCompanies = [];
@@ -29,5 +34,31 @@ fetch(
   });
 
 // render cards companies
+
+function renderCards() {
+  
+  for (const dataCompanie of dataCompanies) {
+
+    let name = dataCompanie.name; 
+    let founded = dataCompanie.founded;
+    let industry = dataCompanie.industry;
+    let size = dataCompanie.size; 
+    let website = dataCompanie.website;
+
+    const newArticleCard = document.createElement('article');
+    const newDivTitle = document.createElement('div');
+    const newH2Name = document.createElement('h2');
+    const newParagraphYear = document.createElement('p');
+    const newDivTags = document.createElement('div');
+    const newDlIndustry = document.createElement('dl');
+    const newDlSize = document.createElement('dl');
+    const newDivLink = document.createElement('div');
+    const newAWebsite = document.createElement('a');
+
+
+
+    console.log(dataCompanie)
+  }
+}
 
 //# sourceMappingURL=main.js.map
