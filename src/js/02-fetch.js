@@ -1,11 +1,11 @@
 // collect server data
+
 fetch(
   `https://challenges-asset-files.s3.us-east-2.amazonaws.com/jobMadrid/companies.json`
 )
   .then((response) => response.json())
   .then((data) => {
-
-    dataCompanies = data.map((aData) => {
+    dataCompanies = data.map(aData => {
       return {
         id: aData.id,
         name: aData.name === null ? 'unknown' : aData.name,
@@ -16,9 +16,11 @@ fetch(
       };
     });
 
-    renderCards()
+    renderCards();
 
-    return dataCompanies;
+    const arrayIndustries = industries(dataCompanies);
+
+
   })
 
   .catch((error) => {
