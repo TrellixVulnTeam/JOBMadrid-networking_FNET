@@ -97,8 +97,6 @@ function renderCards() {
     newDivLink.appendChild(newAWebsite);
 
     cardsCompanies.appendChild(newArticleCard)
-
-    console.l
   }
 }
 

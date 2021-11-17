@@ -15,23 +15,23 @@
   height          : 193px;
   border          : solid 1px #BABABA;
   border-radius   : 10px;
-  background-color: var(--color-grey);
+  background-color: $color-grey;
 
   &__name {
-    font-family   : var(--font-title);
+    font-family   : $font-title;
     font-weight   : 500;
     font-size     : 18px;
     line-height   : 21px;
-    color         : var(--color-black);
+    color         : $color-black;
     text-transform: uppercase;
   }
 
   &__year {
-    font-family   : var(--font-title);
+    font-family   : $font-title;
     font-weight   : 400;
     font-size     : 12px;
     line-height   : 14px;
-    color         : var(--color-black);
+    color         : $color-black;
     text-transform: uppercase;
   }
 
@@ -62,9 +62,9 @@
     width           : 80px;
     height          : 22px;
     border-radius   : 5px;
-    background-color: var(--color-btn);
-    color           : var(--color-white);
-    font-family     : var(--font-normal);
+    background-color: $color-btn;
+    color           : $color-white;
+    font-family     : $font-normal;
     font-size       : 10px;
     line-height     : 16px;
     text-decoration : none;
