@@ -18,7 +18,7 @@ fetch(
 
     renderCards();
 
-    const arrayIndustries = industries(dataCompanies);
+    renderChips();
 
 
   })
