@@ -16,6 +16,7 @@ fetch(
 )
   .then((response) => response.json())
   .then((data) => {
+
     dataCompanies = data.map((aData) => {
       return {
         id: aData.id,
@@ -26,6 +27,9 @@ fetch(
         website: aData.website === null ? 'unknown' : aData.website,
       };
     });
+
+    renderCards()
+
     return dataCompanies;
   })
 
@@ -36,13 +40,13 @@ fetch(
 // render cards companies
 
 function renderCards() {
-  
   for (const dataCompanie of dataCompanies) {
 
-    let name = dataCompanie.name; 
+    let id = dataCompanie.id;
+    let name = dataCompanie.name;
     let founded = dataCompanie.founded;
     let industry = dataCompanie.industry;
-    let size = dataCompanie.size; 
+    let size = dataCompanie.size;
     let website = dataCompanie.website;
 
     const newArticleCard = document.createElement('article');
@@ -55,9 +59,46 @@ function renderCards() {
     const newDivLink = document.createElement('div');
     const newAWebsite = document.createElement('a');
 
+    newArticleCard.classList.add('card');
+    newArticleCard.id = `${id}`;
+    newDivTitle.classList.add('card__title');
+    newH2Name.classList.add('card__name');
+    newParagraphYear.classList.add('card__year');
+    newDivTags.classList.add('card__tags');
+    newDlIndustry.classList.add('card__tags--industry');
+    newDlSize.classList.add('card__tags--size');
+    newDlIndustry.classList.add('tag');
+    newDlSize.classList.add('tag');
+    newDivLink.classList.add('card__container-link');
+    newAWebsite.classList.add('card__link');
+    newAWebsite.target = '_blank';
 
 
-    console.log(dataCompanie)
+    const newContentName = document.createTextNode(`${name}`);
+    const newContentFounded = document.createTextNode(`${founded}`);
+    const newContentIndustry = document.createTextNode(`${industry}`);
+    const newContentSize = document.createTextNode(`${size}`);
+    const newContentWebsite = document.createTextNode('Website')
+    newAWebsite.href = `http://${website}`;
+
+    newH2Name.appendChild(newContentName);
+    newParagraphYear.appendChild(newContentFounded);
+    newDlIndustry.appendChild(newContentIndustry);
+    newDlSize.appendChild(newContentSize);
+    newAWebsite.appendChild(newContentWebsite)
+
+    newArticleCard.appendChild(newDivTitle);
+    newDivTitle.appendChild(newH2Name);
+    newDivTitle.appendChild(newParagraphYear);
+    newArticleCard.appendChild(newDivTags);
+    newDivTags.appendChild(newDlIndustry);
+    newDivTags.appendChild(newDlSize);
+    newArticleCard.appendChild(newDivLink);
+    newDivLink.appendChild(newAWebsite);
+
+    cardsCompanies.appendChild(newArticleCard)
+
+    console.l
   }
 }
 
