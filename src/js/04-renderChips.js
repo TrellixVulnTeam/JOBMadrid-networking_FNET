@@ -18,11 +18,15 @@ function renderChips() {
     const newBtnChip = document.createElement('button');
 
     newBtnChip.classList.add('header__chips--unit');
+    newBtnChip.classList.add('js_chips_companies');
+    newBtnChip.id = `${industry}`
 
     const newContentBtnChip = document.createTextNode(`${industry}`);
 
     newBtnChip.appendChild(newContentBtnChip);
 
     filterChips.appendChild(newBtnChip);
+
+    listenChips();
   }
 }

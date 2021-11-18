@@ -4,9 +4,9 @@ console.log('>> Ready :)');
 
 // html-js variables
 const filterChips = document.querySelector('.js_filter_chips');
+const chipsCompanies = document.querySelector('.js_chips_companies')
 const filterBtn = document.querySelector('.js_filter_btn');
 const cardsCompanies = document.querySelector('.js_cards_companies');
-const cardWebsite = document.querySelector('.js_card_website')
 
 // global variables
 let dataCompanies = [];
@@ -122,13 +122,31 @@ function renderChips() {
     const newBtnChip = document.createElement('button');
 
     newBtnChip.classList.add('header__chips--unit');
+    newBtnChip.classList.add('js_chips_companies');
+    newBtnChip.id = `${industry}`
 
     const newContentBtnChip = document.createTextNode(`${industry}`);
 
     newBtnChip.appendChild(newContentBtnChip);
 
     filterChips.appendChild(newBtnChip);
+
+    listenChips();
   }
+}
+
+// listen chips
+
+function handleChip(ev) {
+  console.log(ev.currentTarget.id);
+}
+
+function listenChips() {
+  const listChips = document.querySelectorAll('.js_chips_companies');
+
+  listChips.forEach((chipEl) => {
+    chipEl.addEventListener('click', handleChip);
+  });
 }
 
 //# sourceMappingURL=main.js.map
