@@ -23,13 +23,14 @@
       font-family  : $font-normal;
       font-size    : 14px;
       line-height  : 16px;
-
-      &:hover {
-        color           : $color-white;
-        border          : none;
-        background-color: $color-btn;
-      }
     }
+
+    &--select {
+      color           : $color-white;
+      border          : none;
+      background-color: $color-btn;
+    }
+
   }
 
   &__filter {
@@ -49,4 +50,6 @@
       color           : $color-white;
     }
   }
+
+
 }

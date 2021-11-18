@@ -18,6 +18,7 @@ function renderChips() {
     const newBtnChip = document.createElement('button');
 
     newBtnChip.classList.add('header__chips--unit');
+    // newBtnChip.classList.add('header__chips--select');
     newBtnChip.classList.add('js_chips_companies');
     newBtnChip.id = `${industry}`
 

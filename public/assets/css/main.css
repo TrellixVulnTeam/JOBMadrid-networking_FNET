@@ -169,10 +169,10 @@ button, input[type="submit"], input[type="reset"] {
       font-family: "Rubik", sans-serif;
       font-size: 14px;
       line-height: 16px; }
-      .header__chips--unit:hover {
-        color: #fff;
-        border: none;
-        background-color: #5AB16D; }
+    .header__chips--select {
+      color: #fff;
+      border: none;
+      background-color: #5AB16D; }
   .header__filter--btn {
     display: flex;
     justify-content: center;
