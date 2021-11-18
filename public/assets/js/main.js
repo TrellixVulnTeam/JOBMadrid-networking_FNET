@@ -11,6 +11,7 @@ const cardsCompanies = document.querySelector('.js_cards_companies');
 // global variables
 let dataCompanies = [];
 let chipsFilter = [];
+let companiesFilter = [];
 // collect server data
 
 fetch(
@@ -152,7 +153,7 @@ function handleChip(ev) {
   } else {
     chipsFilter.splice(chipFound, 1);
   }
-
+                                              
   ev.currentTarget.classList.toggle('header__chips--select');
   ev.currentTarget.classList.toggle('header__chips--unit');
 
@@ -167,4 +168,21 @@ function listenChips() {
   });
 }
 
+const filter = ['María', 'Lucía', 'Susana', 'Rocío', 'Inmaculada'];
+
+const companiesData = [{name:'Susana', edad:28},{name:'Rocío', edad:28}, {name:'Inmaculada', edad:28}]
+
+const companies = companiesData.filter(data => {
+  
+  for (const filterOne of filter) {
+    if (data.name === filterOne) {
+      return true
+    }  } 
+  return false
+  
+}
+
+);
+
+console.log(companies);
 //# sourceMappingURL=main.js.map

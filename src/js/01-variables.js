@@ -11,3 +11,4 @@ const cardsCompanies = document.querySelector('.js_cards_companies');
 // global variables
 let dataCompanies = [];
 let chipsFilter = [];
+let companiesFilter = [];

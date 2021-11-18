@@ -13,7 +13,7 @@ function handleChip(ev) {
   } else {
     chipsFilter.splice(chipFound, 1);
   }
-
+                                              
   ev.currentTarget.classList.toggle('header__chips--select');
   ev.currentTarget.classList.toggle('header__chips--unit');
 
