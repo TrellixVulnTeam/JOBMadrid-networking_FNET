@@ -172,7 +172,13 @@ button, input[type="submit"], input[type="reset"] {
     .header__chips--select {
       color: #fff;
       border: none;
-      background-color: #5AB16D; }
+      background-color: #5AB16D;
+      padding: 8px 26px;
+      border-radius: 20px;
+      margin: 8px;
+      font-family: "Rubik", sans-serif;
+      font-size: 14px;
+      line-height: 16px; }
   .header__filter--btn {
     display: flex;
     justify-content: center;
