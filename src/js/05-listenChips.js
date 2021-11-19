@@ -7,18 +7,17 @@ function handleChip(ev) {
   const chipFound = chipsFilter.findIndex((chip) => {
     return chip === chipSelectId;
   });
+
   // add select for filter
   if (chipFound === -1) {
     chipsFilter.push(chipSelectId);
   } else {
     chipsFilter.splice(chipFound, 1);
   }
-                                              
+
   ev.currentTarget.classList.toggle('header__chips--select');
   ev.currentTarget.classList.toggle('header__chips--unit');
-
-  console.log(chipsFilter);
-}
+ }
 
 function listenChips() {
   const listChips = document.querySelectorAll('.js_chips_companies');

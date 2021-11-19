@@ -1,17 +1,19 @@
-const filter = ['María', 'Lucía', 'Susana', 'Rocío', 'Inmaculada'];
+// filter chips
+function companiesFilter() {
+  const companiesFilter = dataCompanies.filter((data) => {
+    for (const chip of chipsFilter) {
+      if (data.industry === chip) {
+        return true;
+      }
+    }
+    return false;
+  });
 
-const companiesData = [{name:'Susana', edad:28},{name:'Rocío', edad:28}, {name:'Inmaculada', edad:28}]
-
-const companies = companiesData.filter(data => {
-  
-  for (const filterOne of filter) {
-    if (data.name === filterOne) {
-      return true
-    }  } 
-  return false
-  
+  return companiesFilter;
 }
 
-);
+function handleFilterBtn() {
+  console.log('aqui estoy');
+}
 
-console.log(companies);
+filterBtn.addEventListener('click', handleFilterBtn);

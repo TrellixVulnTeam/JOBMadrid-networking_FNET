@@ -21,6 +21,10 @@ fetch(
     renderChips();
 
 
+
+
+
+
   })
 
   .catch((error) => {

@@ -10,8 +10,8 @@ const cardsCompanies = document.querySelector('.js_cards_companies');
 
 // global variables
 let dataCompanies = [];
+let filterCompanies = [];
 let chipsFilter = [];
-let companiesFilter = [];
 // collect server data
 
 fetch(
@@ -33,6 +33,10 @@ fetch(
     renderCards();
 
     renderChips();
+
+
+
+
 
 
   })
@@ -124,7 +128,6 @@ function renderChips() {
     const newBtnChip = document.createElement('button');
 
     newBtnChip.classList.add('header__chips--unit');
-    // newBtnChip.classList.add('header__chips--select');
     newBtnChip.classList.add('js_chips_companies');
     newBtnChip.id = `${industry}`
 
@@ -147,18 +150,17 @@ function handleChip(ev) {
   const chipFound = chipsFilter.findIndex((chip) => {
     return chip === chipSelectId;
   });
+
   // add select for filter
   if (chipFound === -1) {
     chipsFilter.push(chipSelectId);
   } else {
     chipsFilter.splice(chipFound, 1);
   }
-                                              
+
   ev.currentTarget.classList.toggle('header__chips--select');
   ev.currentTarget.classList.toggle('header__chips--unit');
-
-  console.log(chipsFilter);
-}
+ }
 
 function listenChips() {
   const listChips = document.querySelectorAll('.js_chips_companies');
@@ -168,21 +170,24 @@ function listenChips() {
   });
 }
 
-const filter = ['María', 'Lucía', 'Susana', 'Rocío', 'Inmaculada'];
+// filter chips
+function companiesFilter() {
+  const companiesFilter = dataCompanies.filter((data) => {
+    for (const chip of chipsFilter) {
+      if (data.industry === chip) {
+        return true;
+      }
+    }
+    return false;
+  });
 
-const companiesData = [{name:'Susana', edad:28},{name:'Rocío', edad:28}, {name:'Inmaculada', edad:28}]
-
-const companies = companiesData.filter(data => {
-  
-  for (const filterOne of filter) {
-    if (data.name === filterOne) {
-      return true
-    }  } 
-  return false
-  
+  return companiesFilter;
 }
 
-);
+function handleFilterBtn() {
+  console.log('aqui estoy');
+}
 
-console.log(companies);
+filterBtn.addEventListener('click', handleFilterBtn);
+
 //# sourceMappingURL=main.js.map
