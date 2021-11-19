@@ -54,6 +54,12 @@
       font-weight     : 500;
       background-color: $color-btn;
       color           : $color-white;
+
+      &:hover {
+        background-color: $color-white;
+        color           : $color-btn;
+        border          : $color-btn 2px solid;
+      }
     }
   }
 

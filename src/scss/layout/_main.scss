@@ -1,6 +1,6 @@
 .main {
   display              : grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-gap             : 47px;
   padding              : 60px 40px;
   place-items          : center;
@@ -70,6 +70,13 @@
     font-size       : 14px;
     line-height     : 16px;
     text-decoration : none;
+
+    &:hover {
+      background-color: $color-white;
+      color           : $color-btn;
+      border          : $color-btn 1.5px solid;
+    }
+
   }
 
 }
