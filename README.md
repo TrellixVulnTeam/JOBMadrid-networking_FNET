@@ -9,27 +9,35 @@ La información de las compañias son:
 - Tamaño
 - Website 
 
+[![CodeFactor](https://www.codefactor.io/repository/github/jnataliaramirez/jobmadrid-networking/badge)](https://www.codefactor.io/repository/github/jnataliaramirez/jobmadrid-networking)
 
 ## Background 
 Este proyecto es un ejercicio práctico para participar en la hackathon JOBMadrid 2021. 
 
+## Recomendaciones
+- Quizas tu navegador nuestre una pantalla en blanco, esto es porqué la API, esta teniendo problemas, te aparecerá un problema: cross-domain request. Te recomiendo instalar en google Chrome esta extension [Moesif Origin & CORS Changer](https://chrome.google.com/webstore/detail/moesif-origin-cors-change/digfbfaphojjndkpccljibejjbppifbc) y ya podras ver todo el contenido. 
 
 ## Stack 
 ![](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-: Esta tecnologia fue utilizada para prácticar y reforzar lo utilizado en JavaScript, es interesante programar con JavaScript Vanilla porqué haces una programación imperativa y permite hacer paso por paso cada cosa y no lograr saltarte pasos.
+: Esta tecnologia fue utilizada para prácticar y reforzar lo estudiado en JavaScript, es interesante programar con JavaScript Vanilla porqué haces una programación imperativa y si dominas js cualquier framework nuevo será más fácil de aprender. (y tambien me gusta 💜 React )
 
 ![](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 : Maquetación de la web
 
-![](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white): Dar estilos a la pág.
+![](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+: Dar estilos a la pág.
 
-![](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white): Framework CSS para facilitar la utilización de CSS y hacerlo de manera más práctica. 
+![](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
+: Framework CSS para facilitar la utilización de CSS y hacerlo de manera más práctica. 
 
-![](https://img.shields.io/badge/gulp-CF4647?style=for-the-badge&logo=gulp&logoColor=white):Sistema de compilación de transmisión en el desarrollo web front-end.
+![](https://img.shields.io/badge/gulp-CF4647?style=for-the-badge&logo=gulp&logoColor=white)
+: Sistema de compilación de transmisión en el desarrollo web front-end.
 
-![](https://img.shields.io/badge/NPM-20232A?style=for-the-badge&logo=npm&logoColor=61DAFB): Facilita la gestión de paquetes por defecto de Node.js
+![](https://img.shields.io/badge/NPM-20232A?style=for-the-badge&logo=npm&logoColor=61DAFB)
+: Facilita la gestión de paquetes por defecto de Node.js
 
-![](https://img.shields.io/badge/Git-F74E27?style=for-the-badge&logo=git&logoColor=white): Control de versiones. 
+![](https://img.shields.io/badge/Git-F74E27?style=for-the-badge&logo=git&logoColor=white)
+: Control de versiones. 
 
 
 ## Instalación
@@ -108,13 +116,11 @@ src
 ```
 
 ## Contactame 
-[<img src="https://raw.githubusercontent.com/Raymo111/Raymo111/master/socials/linkedin.png" height="30em" align="center" alt="Follow jnataliaramirez on LinkedIn" title="Follow jnataiaramirez on LinkedIn"/>](https://linkedin.com/in/jnataliaramirez)
-[<img src="https://raw.githubusercontent.com/Raymo111/Raymo111/master/socials/twitter.svg" height="30em" align="center" alt="Follow jnataliaramirez on Twitter" title="Follow jnataliaramirez on Twitter"/>](https://twitter.com/jnataliaramirez)
+[<img src="https://raw.githubusercontent.com/Raymo111/Raymo111/master/socials/linkedin.png" height="30em" align="center" alt="Follow jnataliaramirez on LinkedIn" title="Follow jnataiaramirez on LinkedIn"/>](https://linkedin.com/in/jnataliaramirez) [<img src="https://raw.githubusercontent.com/Raymo111/Raymo111/master/socials/twitter.svg" height="30em" align="center" alt="Follow jnataliaramirez on Twitter" title="Follow jnataliaramirez on Twitter"/>](https://twitter.com/jnataliaramirez)
 
 ## Reconocimientos 
 
-Para realizar este ejercicio con Gulp y Node.js tome como base el 
-[Web Starter Kit de Adalab](https://github.com/adalab/adalab-web-starter-kit)
+Para realizar este ejercicio con Gulp y Node.js tome como base el [Web Starter Kit de Adalab](https://github.com/adalab/adalab-web-starter-kit)
 
 ## License 
 
