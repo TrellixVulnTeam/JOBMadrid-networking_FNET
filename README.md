@@ -5,7 +5,7 @@ Se desarrolla una app web donde los usuarios encontraran diferentes compañias c
 La información de las compañias son: 
 - Nombre
 - Fecha de fundación
-- Indsutria
+- Industria
 - Tamaño
 - Website 
 
