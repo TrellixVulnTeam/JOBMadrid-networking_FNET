@@ -1,11 +1,9 @@
 // render cards companies
 
 function renderCards(data) {
-
   cardsCompanies.innerHTML = '';
 
   for (const dataCompanie of data) {
-
     let id = dataCompanie.id;
     let name = dataCompanie.name;
     let founded = dataCompanie.founded;
@@ -37,19 +35,18 @@ function renderCards(data) {
     newAWebsite.classList.add('card__link');
     newAWebsite.target = '_blank';
 
-
     const newContentName = document.createTextNode(`${name}`);
     const newContentFounded = document.createTextNode(`${founded}`);
     const newContentIndustry = document.createTextNode(`${industry}`);
     const newContentSize = document.createTextNode(`${size}`);
-    const newContentWebsite = document.createTextNode('Website')
+    const newContentWebsite = document.createTextNode('Website');
     newAWebsite.href = `http://${website}`;
 
     newH2Name.appendChild(newContentName);
     newParagraphYear.appendChild(newContentFounded);
     newDlIndustry.appendChild(newContentIndustry);
     newDlSize.appendChild(newContentSize);
-    newAWebsite.appendChild(newContentWebsite)
+    newAWebsite.appendChild(newContentWebsite);
 
     newArticleCard.appendChild(newDivTitle);
     newDivTitle.appendChild(newH2Name);
@@ -60,6 +57,6 @@ function renderCards(data) {
     newArticleCard.appendChild(newDivLink);
     newDivLink.appendChild(newAWebsite);
 
-    cardsCompanies.appendChild(newArticleCard)
+    cardsCompanies.appendChild(newArticleCard);
   }
 }

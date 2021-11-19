@@ -4,14 +4,14 @@ console.log('>> Ready :)');
 
 // html-js variables
 const filterChips = document.querySelector('.js_filter_chips');
-const chipsCompanies = document.querySelector('.js_chips_companies')
+const chipsCompanies = document.querySelector('.js_chips_companies');
 const filterBtn = document.querySelector('.js_filter_btn');
 const cardsCompanies = document.querySelector('.js_cards_companies');
 
 // global variables
 let dataCompanies = [];
-// let companiesSelect = [];
 let chipsFilter = [];
+
 // collect server data
 
 fetch(
@@ -19,7 +19,7 @@ fetch(
 )
   .then((response) => response.json())
   .then((data) => {
-    dataCompanies = data.map(aData => {
+    dataCompanies = data.map((aData) => {
       return {
         id: aData.id,
         name: aData.name === null ? 'unknown' : aData.name,
@@ -31,9 +31,8 @@ fetch(
     });
 
     renderCards(dataCompanies);
-    
-    renderChips();
 
+    renderChips();
   })
 
   .catch((error) => {
@@ -43,11 +42,9 @@ fetch(
 // render cards companies
 
 function renderCards(data) {
-
   cardsCompanies.innerHTML = '';
 
   for (const dataCompanie of data) {
-
     let id = dataCompanie.id;
     let name = dataCompanie.name;
     let founded = dataCompanie.founded;
@@ -79,19 +76,18 @@ function renderCards(data) {
     newAWebsite.classList.add('card__link');
     newAWebsite.target = '_blank';
 
-
     const newContentName = document.createTextNode(`${name}`);
     const newContentFounded = document.createTextNode(`${founded}`);
     const newContentIndustry = document.createTextNode(`${industry}`);
     const newContentSize = document.createTextNode(`${size}`);
-    const newContentWebsite = document.createTextNode('Website')
+    const newContentWebsite = document.createTextNode('Website');
     newAWebsite.href = `http://${website}`;
 
     newH2Name.appendChild(newContentName);
     newParagraphYear.appendChild(newContentFounded);
     newDlIndustry.appendChild(newContentIndustry);
     newDlSize.appendChild(newContentSize);
-    newAWebsite.appendChild(newContentWebsite)
+    newAWebsite.appendChild(newContentWebsite);
 
     newArticleCard.appendChild(newDivTitle);
     newDivTitle.appendChild(newH2Name);
@@ -102,7 +98,7 @@ function renderCards(data) {
     newArticleCard.appendChild(newDivLink);
     newDivLink.appendChild(newAWebsite);
 
-    cardsCompanies.appendChild(newArticleCard)
+    cardsCompanies.appendChild(newArticleCard);
   }
 }
 
@@ -122,12 +118,11 @@ function renderChips() {
   const arrayIndustries = industries();
 
   for (const industry of arrayIndustries) {
-
     const newBtnChip = document.createElement('button');
 
     newBtnChip.classList.add('header__chips--unit');
     newBtnChip.classList.add('js_chips_companies');
-    newBtnChip.id = `${industry}`
+    newBtnChip.id = `${industry}`;
 
     const newContentBtnChip = document.createTextNode(`${industry}`);
 
@@ -158,7 +153,7 @@ function handleChip(ev) {
 
   ev.currentTarget.classList.toggle('header__chips--select');
   ev.currentTarget.classList.toggle('header__chips--unit');
- }
+}
 
 function listenChips() {
   const listChips = document.querySelectorAll('.js_chips_companies');

@@ -38,17 +38,17 @@
   &__tags {
     display     : flex;
     margin-right: 4px;
-    
+
     &--industry {
       font-size: 14px;
-      border: 1.5px $color-purple solid;
-      color : $color-purple;
+      border   : 1.5px $color-purple solid;
+      color    : $color-purple;
     }
 
     &--size {
       font-size: 14px;
-      border: 1.5px $color-green-2 solid;
-      color : $color-green-2;
+      border   : 1.5px $color-green-2 solid;
+      color    : $color-green-2;
     }
   }
 

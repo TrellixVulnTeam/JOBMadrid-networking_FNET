@@ -17,7 +17,7 @@ function handleChip(ev) {
 
   ev.currentTarget.classList.toggle('header__chips--select');
   ev.currentTarget.classList.toggle('header__chips--unit');
- }
+}
 
 function listenChips() {
   const listChips = document.querySelectorAll('.js_chips_companies');

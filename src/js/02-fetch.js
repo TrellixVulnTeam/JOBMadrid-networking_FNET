@@ -5,7 +5,7 @@ fetch(
 )
   .then((response) => response.json())
   .then((data) => {
-    dataCompanies = data.map(aData => {
+    dataCompanies = data.map((aData) => {
       return {
         id: aData.id,
         name: aData.name === null ? 'unknown' : aData.name,
@@ -17,9 +17,8 @@ fetch(
     });
 
     renderCards(dataCompanies);
-    
-    renderChips();
 
+    renderChips();
   })
 
   .catch((error) => {
