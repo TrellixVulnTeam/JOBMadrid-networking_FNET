@@ -1,7 +1,10 @@
 // render cards companies
 
-function renderCards() {
-  for (const dataCompanie of dataCompanies) {
+function renderCards(data) {
+
+  cardsCompanies.innerHTML = '';
+
+  for (const dataCompanie of data) {
 
     let id = dataCompanie.id;
     let name = dataCompanie.name;

@@ -10,7 +10,7 @@ const cardsCompanies = document.querySelector('.js_cards_companies');
 
 // global variables
 let dataCompanies = [];
-let filterCompanies = [];
+// let companiesSelect = [];
 let chipsFilter = [];
 // collect server data
 
@@ -30,14 +30,9 @@ fetch(
       };
     });
 
-    renderCards();
-
+    renderCards(dataCompanies);
+    
     renderChips();
-
-
-
-
-
 
   })
 
@@ -47,8 +42,11 @@ fetch(
 
 // render cards companies
 
-function renderCards() {
-  for (const dataCompanie of dataCompanies) {
+function renderCards(data) {
+
+  cardsCompanies.innerHTML = '';
+
+  for (const dataCompanie of data) {
 
     let id = dataCompanie.id;
     let name = dataCompanie.name;
@@ -172,7 +170,7 @@ function listenChips() {
 
 // filter chips
 function companiesFilter() {
-  const companiesFilter = dataCompanies.filter((data) => {
+  const companiesFilterArray = dataCompanies.filter((data) => {
     for (const chip of chipsFilter) {
       if (data.industry === chip) {
         return true;
@@ -181,11 +179,17 @@ function companiesFilter() {
     return false;
   });
 
-  return companiesFilter;
+  return companiesFilterArray;
 }
 
 function handleFilterBtn() {
-  console.log('aqui estoy');
+  let companiesSelect = companiesFilter();
+
+  if (Object.entries(companiesSelect).length === 0) {
+    companiesSelect = dataCompanies;
+  }
+
+  renderCards(companiesSelect);
 }
 
 filterBtn.addEventListener('click', handleFilterBtn);

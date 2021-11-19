@@ -1,6 +1,6 @@
 // filter chips
 function companiesFilter() {
-  const companiesFilter = dataCompanies.filter((data) => {
+  const companiesFilterArray = dataCompanies.filter((data) => {
     for (const chip of chipsFilter) {
       if (data.industry === chip) {
         return true;
@@ -9,11 +9,17 @@ function companiesFilter() {
     return false;
   });
 
-  return companiesFilter;
+  return companiesFilterArray;
 }
 
 function handleFilterBtn() {
-  console.log('aqui estoy');
+  let companiesSelect = companiesFilter();
+
+  if (Object.entries(companiesSelect).length === 0) {
+    companiesSelect = dataCompanies;
+  }
+
+  renderCards(companiesSelect);
 }
 
 filterBtn.addEventListener('click', handleFilterBtn);

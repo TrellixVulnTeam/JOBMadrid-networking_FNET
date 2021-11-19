@@ -16,14 +16,9 @@ fetch(
       };
     });
 
-    renderCards();
-
+    renderCards(dataCompanies);
+    
     renderChips();
-
-
-
-
-
 
   })
 
