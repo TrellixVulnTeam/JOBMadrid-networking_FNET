@@ -9,7 +9,8 @@ La información de las compañias son:
 - Tamaño
 - Website 
 
-[![CodeFactor](https://www.codefactor.io/repository/github/jnataliaramirez/jobmadrid-networking/badge)](https://www.codefactor.io/repository/github/jnataliaramirez/jobmadrid-networking)
+## Calidad de código: 
+ [![CodeFactor](https://www.codefactor.io/repository/github/jnataliaramirez/jobmadrid-networking/badge)](https://www.codefactor.io/repository/github/jnataliaramirez/jobmadrid-networking)
 
 ## Background 
 Este proyecto es un ejercicio práctico para participar en la hackathon JOBMadrid 2021. 
@@ -39,6 +40,16 @@ Este proyecto es un ejercicio práctico para participar en la hackathon JOBMadri
 ![](https://img.shields.io/badge/Git-F74E27?style=for-the-badge&logo=git&logoColor=white)
 : Control de versiones. 
 
+## Historias 
+- [x] Task 1 → Puedo ver la barra superior con el botón de filter y las chips de filtro (botones con cada uno de los nombres de industria que se encuentran en la lista de compañías del enunciado) 
+
+- [x] Task 2 → Si no hay ninguna chip de filtro seleccionada puedo ver la lista completa de compañías
+
+- [x] Task 3 → Al seleccionar un filtro, se ven únicamente las empresas que contienen ese filtro
+
+- [x]  Task 4 → Al hacer click en website me lleva a una página externa
+
+- [x] Task 5 → La card de cada empresa contiene la siguiente información: Nombre, Año, Industria, Tamaño, Link a la web
 
 ## Instalación
 > **NOTA:** Necesitas tener instalado [Node JS](https://nodejs.org/) para trabajar con este Starter Kit:
